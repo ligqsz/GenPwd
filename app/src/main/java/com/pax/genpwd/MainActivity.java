@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements OnDateSelectedLis
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Density.cancelAdaptScreen(this);
         Density.adaptScreen(this, 360, true);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -115,5 +116,11 @@ public class MainActivity extends AppCompatActivity implements OnDateSelectedLis
         et.setFocusable(true);
         et.setFocusableInTouchMode(true);
         et.requestFocus();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Density.cancelAdaptScreen(this);
     }
 }
