@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GenPwd</string>
+    <string name="sn">SN:</string>
+    <string name="generate">Gen</string>
+    <string name="password">password</string>
+    <string name="filter_code">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+</resources>

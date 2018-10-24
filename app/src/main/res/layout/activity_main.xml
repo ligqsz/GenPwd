@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.pax.genpwd.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:mcv_selectionColor="@color/colorPrimary"
+            card_view:mcv_showOtherDates="all"
+            card_view:mcv_tileHeight="match_parent" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/card_foreground"
+        card_view:cardBackgroundColor="@color/colorPrimary"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="5dp"
+        card_view:contentPadding="8dp">
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/password"
+            android:textColor="@color/white"
+            android:textSize="60sp" />
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="2"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/sn"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp" />
+
+        <com.pax.genpwd.CustomEditText
+            android:id="@+id/et_sn"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_et_bg"
+            android:digits="@string/filter_code"
+            android:gravity="center"
+            android:inputType="textNoSuggestions"
+            android:maxLength="12"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            tools:ignore="LabelFor,NestedWeights" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_gen"
+            android:layout_width="@dimen/gen_size"
+            android:layout_height="@dimen/gen_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/card_foreground"
+            card_view:cardBackgroundColor="@color/colorPrimary"
+            card_view:cardCornerRadius="@dimen/gen_radius"
+            card_view:cardElevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/generate"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</LinearLayout>
